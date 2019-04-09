@@ -1,0 +1,4 @@
+body.change-list #changelist-form > .actions > label,
+body.change-list #changelist-form > .actions > button[type="submit"] {
+    display: none;
+}
