@@ -2,3 +2,9 @@ body.change-list #changelist-form > .actions > label,
 body.change-list #changelist-form > .actions > button[type="submit"] {
     display: none;
 }
+body.change-list #changelist-form > .actions > .action-button {
+    margin-right: 0.5em;
+}
+body.change-list #changelist-form > .actions > .action-button:last-child {
+    margin-right: 0;
+}
