@@ -1,8 +1,9 @@
 window.addEventListener("load", function() {
     var $ = django.jQuery;
     var $actions = $('#changelist-form > .actions');
-
     var $select = $actions.find('select[name="action"]');
+
+    if (!$select.length) return;
 
     var cleanWhitespace = function(element) {
         for (var i = 0; i < element.childNodes.length; i++) {
