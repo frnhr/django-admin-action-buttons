@@ -1,5 +1,14 @@
 # django-admin-action-buttons
+
 Replaces the default action dropdown with buttons
+
+Before:
+
+![Before](docs/img/before.jpg)
+
+After:
+
+![After](docs/img/after.jpg)
 
 
 ## Installation
