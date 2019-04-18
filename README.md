@@ -13,7 +13,7 @@ After:
 
 ## Installation
 
-1. `pip install `.... coming soon :grin:
+1. `pip install django-admin-action-buttons`
 2. Add `'admin_action_buttons',` to `INSTALLED_APPS`
 
 
