@@ -1,9 +1,6 @@
 window.addEventListener("load", function() {
     var $ = django.jQuery;
     var $actions = $('#changelist-form > .actions');
-    var $select = $actions.find('select[name="action"]');
-
-    if (!$select.length) return;
 
     var cleanWhitespace = function(element) {
         for (var i = 0; i < element.childNodes.length; i++) {
@@ -13,23 +10,30 @@ window.addEventListener("load", function() {
         }
     };
 
-    cleanWhitespace($actions[0]);
-
-    $select.find('option').each(function(_, option) {
-        if (!option.value) {
-            return;
-        }
-        $actions.append(
-            '<button type="button" class="action-button js-action-button" name="' + option.value + '">' + option.innerHTML + '</button>');
-    });
-
     var clickHandler = function(event) {
         event.preventDefault();
         var button = event.target;
+        var $select = $(button).parent().find('select[name="action"]');
         $select.val(button.name);
         $select.closest('form').find('button[type="submit"]').click();
 
     };
 
-    $actions.on('click', 'button.js-action-button', clickHandler);
+    $actions.each(function() {
+        var $this = $(this);
+        var $select = $this.find('select[name="action"]');
+        if (!$select.length) return;
+
+        cleanWhitespace($this[0]);
+
+        $select.find('option').each(function(_, option) {
+            if (!option.value) {
+                return;
+            }
+            $this.append(
+                '<button type="button" class="action-button js-action-button" name="' + option.value + '">' + option.innerHTML + '</button>');
+        });
+
+        $this.on('click', 'button.js-action-button', clickHandler);
+    });
 });
