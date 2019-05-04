@@ -13,6 +13,11 @@ setup(
     author_email='fran@changeset.hr',
     scripts=[],
     packages=['admin_action_buttons'],
+    package_data={
+        'admin_action_buttons': [
+            'static/admin_action_buttons/*',
+        ],
+    },
     license='MIT',
     keywords='',
     install_requires=[],
