@@ -31,7 +31,7 @@ window.addEventListener("load", function() {
                 return;
             }
             $this.append(
-                '<button type="button" class="action-button js-action-button" name="' + option.value + '">' + option.innerHTML + '</button>');
+                '<button type="button" class="action-button js-action-button button" name="' + option.value + '">' + option.innerHTML + '</button>');
         });
 
         $this.on('click', 'button.js-action-button', clickHandler);
