@@ -1,0 +1,10 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block footer %}
+    {{ block.super }}
+    {% if admin_action_buttons %}
+        <link rel="stylesheet" type="text/css" href="{% static 'admin_action_buttons/admin_action_buttons.css' %}" />
+        <script type="text/javascript" src="{% static 'admin_action_buttons/admin_action_buttons.js' %}"></script>
+    {% endif %}
+{% endblock footer %}
