@@ -1,4 +1,6 @@
 window.addEventListener("load", function() {
+    if (!django || ! django.jQuery) return;
+
     const $ = django.jQuery;
     const $actions = $('#changelist-form > .actions');
     const $body = $('body');
