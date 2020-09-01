@@ -16,6 +16,7 @@ setup(
     package_data={
         'admin_action_buttons': [
             'static/admin_action_buttons/*',
+            'templates/admin_action_buttons/*',
         ],
     },
     license='MIT',
