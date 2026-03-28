@@ -7,12 +7,13 @@ setup(
     name='django-admin-action-buttons',
     description='Django admin tweak that replaces list action dropdown with '
                 'buttons',
-    version='0.1.8',
+    version='0.1.10',
     url='https://github.com/frnhr/django-admin-action-buttons',
     author='Fran Hrzenjak',
     author_email='fran@changeset.hr',
     scripts=[],
     packages=['admin_action_buttons'],
+	include_package_data=True,
     package_data={
         'admin_action_buttons': [
             'static/admin_action_buttons/*',
