@@ -10,6 +10,6 @@ body.admin_action_buttons.change-list #changelist-form > .actions > .action-butt
 }
 
 /* compatibility with django-admin-interface app */
-body .admin-interface.sticky-actions #changelist .actions {
+body.admin_action_buttons.admin-interface.sticky-actions #changelist .actions {
     flex-wrap: wrap;
 }
