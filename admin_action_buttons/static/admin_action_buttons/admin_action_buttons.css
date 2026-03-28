@@ -8,3 +8,8 @@ body.admin_action_buttons.change-list #changelist-form > .actions > .action-butt
 body.admin_action_buttons.change-list #changelist-form > .actions > .action-button:last-child {
     margin-right: 0;
 }
+
+/* compatibility with django-admin-interface app */
+body .admin-interface.sticky-actions #changelist .actions {
+    flex-wrap: wrap;
+}
