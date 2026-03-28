@@ -4,7 +4,7 @@
 from setuptools import setup
 
 setup(
-    name='django-admin-action-buttons',
+    name='django_admin_action_buttons',
     description='Django admin tweak that replaces list action dropdown with '
                 'buttons',
     version='0.1.10',
